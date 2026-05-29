@@ -12,18 +12,37 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="flex min-h-screen flex-col items-center justify-center bg-background p-4 text-center">
+      <div className="max-w-2xl space-y-6">
+        <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
+          Seu projeto está pronto!
+        </h1>
+        <p className="text-lg text-muted-foreground">
+          A aplicação foi carregada com sucesso. Você pode começar a editar{' '}
+          <code className="rounded bg-muted px-1 py-0.5 font-mono text-sm">
+            src/routes/index.tsx
+          </code>{' '}
+          para mudar esta página.
+        </p>
+        <div className="flex flex-wrap justify-center gap-4">
+          <button
+            className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
+            onClick={() => window.location.reload()}
+          >
+            Atualizar Página
+          </button>
+          <a
+            href="https://lovable.dev/docs"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
+          >
+            Ver Documentação
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
